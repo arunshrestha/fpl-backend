@@ -1,0 +1,59 @@
+# -----------------------------
+# Build folders
+# -----------------------------
+/build/
+/bin/
+
+# -----------------------------
+# Gradle
+# -----------------------------
+/.gradle/
+gradle-app.setting
+!gradle-wrapper.jar
+
+# -----------------------------
+# Gradle wrapper (keep only necessary files)
+/gradle/wrapper/gradle-wrapper.jar
+/gradle/wrapper/gradle-wrapper.properties
+# -----------------------------
+
+# -----------------------------
+# IDE / Editor files
+# -----------------------------
+*.iml
+.idea/
+/*.ipr
+/*.iws
+.vscode/
+
+# -----------------------------
+# OS files
+# -----------------------------
+.DS_Store
+Thumbs.db
+
+# -----------------------------
+# Logs
+# -----------------------------
+*.log
+
+# -----------------------------
+# Local configuration / secrets
+# -----------------------------
+application-local.yaml
+.env
+*.keystore
+*.jks
+
+# -----------------------------
+# Generated sources / annotations
+# -----------------------------
+**/generated-sources/
+**/generated-test-sources/
+
+# -----------------------------
+# Jar, war, eclipse, other build outputs
+# -----------------------------
+*.jar
+*.war
+*.ear

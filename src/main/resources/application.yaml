@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: fpl-backend
+  profiles:
+    active: local
+  flyway:
+    enabled: false
+  management:
+    endpoints:
+      web:
+        exposure:
+          include: health,info
+    endpoint:
+      health:
+        show-details: always

@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://<STAGING_HOST>:5432/<STAGING_DB>?sslmode=require
+    username: <STAGING_USER>
+    password: <STAGING_PASS>
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: false
