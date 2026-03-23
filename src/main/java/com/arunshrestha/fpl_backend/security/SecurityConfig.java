@@ -17,6 +17,8 @@ public class SecurityConfig {
                 http
                                 .csrf(csrf -> csrf.disable())
                                 .authorizeHttpRequests(auth -> auth
+                                                // allow all requests to /api/v1/** until jwt is setup
+                                                .requestMatchers("/api/v1/**").permitAll()
                                                 // allow your public APIs
                                                 .requestMatchers("/api/v1/public/**").permitAll()
                                                 // allow actuator health
