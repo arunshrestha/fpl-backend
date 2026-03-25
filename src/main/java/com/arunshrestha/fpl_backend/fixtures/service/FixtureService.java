@@ -19,7 +19,7 @@ public class FixtureService {
         this.fixtureRepository = fixtureRepository;
     }
 
-    public List<Fixture> getFixtures(Integer gameweek, Integer teamId) {
+    public List<Fixture> getFixtures(Integer gameweek, Integer teamId, Boolean finished) {
         return fixtureRepository.findAll((root, query, cb) -> {
             List<Predicate> predicates = new ArrayList<>();
 
@@ -31,6 +31,10 @@ public class FixtureService {
                 predicates.add(cb.or(
                         cb.equal(root.get("homeTeamId"), teamId),
                         cb.equal(root.get("awayTeamId"), teamId)));
+            }
+
+            if (finished != null) {
+                predicates.add(cb.equal(root.get("finished"), finished));
             }
 
             return cb.and(predicates.toArray(new Predicate[0]));
